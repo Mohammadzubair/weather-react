@@ -62,7 +62,7 @@
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  min-height: 500px;
+  min-height: 388px;
   width: 100%;
   max-width: 700px;
   margin-top: 50px;
@@ -83,7 +83,7 @@
   height: 100px;
   width: 100px;
   display: inline-block;
-  margin-block: 50px;
+  margin-block: 35px;
   font-size: 78px;
 }
 
@@ -107,13 +107,22 @@
   flex-basis: 30%;
 }
 
+.weatherDate h2 {
+  font-size: 24px;
+}
+
 .weatherBottomSection {
   display: flex;
   justify-content: space-between;
+  background-color: #000;
+  border-radius: 0px 0px 10px 10px;
+  -webkit-border-radius: 0px 0px 10px 10px;
+  -moz-border-radius: 0px 0px 10px 10px;
+  -ms-border-radius: 0px 0px 10px 10px;
+  -o-border-radius: 0px 0px 10px 10px;
 }
 
 .weatherBox {
-  background-color: #000;
   height: 100%;
   width: 25%;
   color: #fff;
@@ -127,6 +136,23 @@
   margin-right: 20px;
 }
 
+.weatherBox p {
+  font-size: 18px;
+  font-weight: 600;
+}
+
 .weatherBox p span {
   display: block;
+}
+
+.temp {
+  margin-right: 40px;
+}
+
+.temp h2 {
+  font-size: 54px;
+}
+
+.country p {
+  font-size: 28px;
 }

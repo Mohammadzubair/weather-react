@@ -34,7 +34,7 @@ export const Weather = () => {
   });
   const getWeatherData = async () => {
     try {
-      let url = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&appid=36073263ae44556d26bbdd8ba9c645d8`;
+      let url = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&units=metric&appid=36073263ae44556d26bbdd8ba9c645d8`;
       const result = await axios.get(url);
       setApiData(result.data);
       console.log(`API Result`, result);
@@ -63,16 +63,16 @@ export const Weather = () => {
         </div>
         <div className="weatherCloudsWrapper">
           <div className="weatherCloud">
-            <div>
-              <p>khkll,m;</p>
+            <div className="temp">
+              <h2>{apiData?.main?.temp}&deg;</h2>
             </div>
-            <div>
+            <div className="country">
               <p>{apiData?.weather[0]?.main}</p>
               <p>{`${apiData?.name}, ${apiData?.sys?.country}`}</p>
             </div>
           </div>
           <div className="weatherDate">
-            <h1>{new Date().toLocaleString()}</h1>
+            <h2>{new Date().toLocaleString()}</h2>
           </div>
         </div>
         <div className="weatherBottomSection">
@@ -100,7 +100,7 @@ export const Weather = () => {
           <div className="weatherBox">
             <i className={"wi wi-strong-wind"}></i>
             <p>
-            {apiData?.wind?.speed}
+              {apiData?.wind?.speed}
               <span>Speed</span>
             </p>
           </div>
